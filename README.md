@@ -55,3 +55,24 @@ if (isAtEdge())
 ```
 setLocation(Xposition,Yposition);
 ```
+## 9. Set up the world at the beginning.
+```
+public MyWorld()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1); 
+        prepare();
+    }
+//Create the function prepare
+private void prepare(){
+    addObject(new playerX(),put_Xposition,put_YPosition);
+    //Adding object/actor at random position 
+    int xrandom=Greenfoot.getRandomNumber(getWidth());
+    int yrandom=Greenfoot.getRandomNumber(getHeight());
+    addObject(new playerY(),xrandom,yrandom);
+    }
+```
+## 10. Generating random number in Greenfoot.
+```
+int xrandom=Greenfoot.getRandomNumber(10);//any random value from 0 to 9
+```
